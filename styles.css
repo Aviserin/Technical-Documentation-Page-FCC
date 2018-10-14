@@ -35,19 +35,47 @@ body {
 	border-right-color: grey;
 }
 
-.social {
+@media (max-width: 650px) {
+	#navbar {
+		position: static;
+		height: 40%;
+		border: 0;
+	}
+}
+
+footer {
 	position: fixed;
 	padding: 10px;
 	min-width: 300px;
-	text-align: center;
 	left: 0;
 	top: 500px;
+	border-right: 2px solid;
+	border-right-color: grey;
+}
+
+@media (max-width: 650px) {
+	footer {
+		position: static;
+		border: 0;
+	}
+}
+
+.social {
+	display: flex;
+	justify-content: center;
 }
 
 .social img {
 	width: 64px;
 	height: 64px;
-	margin-right: 15px;
+	padding: 10px;
+}
+
+@media (max-width: 650px) {
+	.social img {
+		width: 32px;
+		height: 32px;
+	}
 }
 
 header {
@@ -71,6 +99,12 @@ header {
 	transition: .4s;
 }
 
+@media (max-width: 650px) {
+	#navbar ul li {
+		margin: 5px 0;
+	}
+}
+
 #navbar ul li:hover,
 #navbar ul li a:hover {
 	color: var(--main-bg);
@@ -91,15 +125,25 @@ header {
 	position: absolute;
 	left: 321px;
 	padding: 10px;
+	height: 100vh;
+}
+
+@media (max-width: 650px) {
+	#main-doc {
+		position: static;
+		height: 60%;
+	}
 }
 
 #main-doc header {
 	text-align: left;
-	border-bottom: 1px solid yellow;
+	border-bottom: 1px solid yellowgreen;
 }
 
-.main-section {
-	margin: 25px 0;
+@media (max-width: 650px) {
+	#main-doc header {
+		text-align: center;
+	}
 }
 
 .main-section p {
@@ -116,7 +160,7 @@ header {
 }
 
 .main-section ul {
-	margin-left: 25px;
+	padding: 10px 15px;
 }
 
 .main-section ul li {
@@ -131,6 +175,19 @@ ul li a {
 
 ul li a:hover {
 	color: dodgerblue;
+}
+
+.toTop {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.top {
+	padding: 5px;
+	text-decoration: none;
+	color: yellowgreen;
+	border: 1px solid;
+	border-radius: 5px;
 }
 
 /* /main */
